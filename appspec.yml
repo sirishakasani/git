@@ -5,12 +5,12 @@ files:
     destination: /var/www/html
 hooks:
   ApplicationStart:
-    - location: scripts/install_nginx.sh
+    - location: scripts/before_install.sh
       timeout: 300
       runas: root
 
   ApplicationStart:
-    - location: scripts/start_nginx.sh
+    - location: scripts/start_server.sh
       timeout: 300
       runas: root
 
